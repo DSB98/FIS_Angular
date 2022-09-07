@@ -1,0 +1,35 @@
+<h1>DATABINDING = COMMUNICATION</h1>
+<h3>TS(COMPONENT) ==> HTML(VIEW)</h3>
+<div [ngStyle]="myStyle">
+    Demo Text
+</div>
+<div class="box" [ngClass]="mltClasses">
+    by property declaring binding
+</div>
+<h3>to use Multiple classes at a time then use angular directives</h3>
+<div class="box" [ngClass]="'class1 class2 class 3'">
+    test
+</div>
+<div style="font-size:large">
+{{5*4}}
+<br>
+{{dynamicName}}
+<br>
+{{myMethod()}}
+<br>
+App Status: {{appStatus ? "ONLINE": "OFFLINE"}}
+<br>
+App Status: {{appStatus ? status1: status2}}
+</div>
+
+<h2 style="color:cornflowerblue"> 2. Property Binding [Property]=data</h2>
+<input tyep="text" id="textanme" [value]="dynamicName"/>
+<p style="color:red">Note: binding uses square brackets</p>
+<input tyep="text" id="textanme" bind-value="dynamicName"/>
+<p style="color:red">Note: Binding without squre binding</p>
+<input tyep="text" id="textanme" bind-value="dynamicName" [disabled]="true"/>
+<input tyep="text" id="textanme" bind-value="dynamicName" [hidden]="true"/>
+
+<h2>Event Demo</h2>
+<button (click)="onAddCart()">Add to card</button>
+{{msg}}

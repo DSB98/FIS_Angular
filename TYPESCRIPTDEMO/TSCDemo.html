@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Customer.js"></script>
+</head>
+<body>
+    <script>
+        var cust= new Customer();
+        alert(cust.CustomerName);
+        cust.CustomerDesignation="HR";
+        alert(cust.CustomerDesignation);
+      
+        console.log(cust.CustomerName );
+        cust.validate();
+        var obj=cust.validatereturn();
+        // alert(obj)
+        var obj2=cust.validatedata(10);
+      // alert(obj2)
+
+        var cust2=new SomeOtherCustomer();
+        cust2.validate();
+
+       
+        cust2.CustomerDesignation="MR";
+        var des2=cust2.CustomerDesignation;
+        alert(des2);
+    </script>
+</body>
+</html>

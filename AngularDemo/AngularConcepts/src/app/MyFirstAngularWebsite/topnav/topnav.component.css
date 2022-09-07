@@ -1,0 +1,36 @@
+.topnav{
+
+    background: #dbe277;
+    color: #fff;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+.brand{
+float: left;
+width: 30%;
+font-weight: 700;
+color: navy;
+}
+.toplinks{
+float: right;
+width: 60%;
+text-align: left; 
+text-decoration: none;
+ 
+}
+.toplinks .a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+.clear{
+    clear: both;
+}
+
+.toplinks a:hover
+{
+    color: #000;    
+}
+.toplinks a{
+padding: 5px;    
+}
