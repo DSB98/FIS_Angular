@@ -1,0 +1,74 @@
+<h2 style="font-size: x-large;background-color: cadetblue;color: white;">Transforming Data Using Pipes</h2>
+<a href="https://angular.io/api/common/DatePipe">
+    <h2>Date Pipe</h2>
+</a>
+<p>The trainer's name is {{ Name | titlecase }} </p>
+<p>Today is {{today | date }}</p>
+<p>Today is {{today | date:'medium' }}</p>
+<p>Or if you prefer, {{today | date:'fullDate'| uppercase }}</p>
+<p>The time is {{today | date:'h:mm a z'}}</p>
+
+<p>DateTime as Milliseconds : {{todayNumber}}
+    datepipe:{{todayNumber | date}}</p>
+<p>DateTime as object : {{todayDate}}
+    datepipe:{{todayDate | date}}</p>
+<p>DateTime as string : {{todayString}}
+    datepipe:{{todayString | date}}</p>
+<p>DateTime as iso string : {{todayISOString}}
+    datepipe:{{todayISOString | date}}</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Product Image</th>
+                        <th>Product Name</th>
+                        <th>Product ID</th>
+                        <th>Product Price</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let mypro of products;index as i">
+                    <td># {{i+1}}</td>
+                    <td><img src="{{mypro.proimg}}" width="70" alt="" /></td>
+                    <td>{{mypro.name | titlecase}}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<h2 style="font-size: x-large;background-color: cadetblue;color: white;">Using Custom Pipes</h2>
+
+<p>The trainer's name is {{ Name |uppercase | customPipes }} </p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Product Image</th>
+                        <th>Product Name</th>
+                        <th>Product ID</th>
+                        <th>Product Price</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let mypro of products;index as i">
+                    <td># {{i+1}}</td>
+                    <td><img src="{{mypro.proimg}}" width="70" alt="" /></td>
+                    <td>{{mypro.name |uppercase | customPipes }}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<article style="font-size: x-large;background-color: cadetblue;color: white;">
+    NgSwitch
+    DIRECTIVE
+    The [ngSwitch] directive on a container specifies an expression to match against. 
+    The expressions to match are provided by ngSwitchCase directives on views within the container.
+    Every view that matches is rendered.
+    If there are no matches, a view with the ngSwitchDefault directive is rendered.
+    Elements within the [NgSwitch] statement but outside of any NgSwitchCase or ngSwitchDefault directive are preserved at the location..</article>
+<a href="https://angular.io/api/common/NgSwitch">NgSwitch</a>
+<br>
+<input type="text" value="switchCase" [(ngModel)]="switch_expression">
+<p>{{switch_expression}}</p>
+<div>
+<div style="font-size: x-large;"  [ngSwitch]="switch_expression">
+        <!-- the same view can be shown in more than one case -->
+        <div *ngSwitchCase="1">
+        <p>First case</p>
+        </div>
+        <div *ngSwitchCase="2">
+        <p>Second case</p>
+        </div>
+        <div *ngSwitchCase="3">
+        <p>Third case</p>
+        </div>
+        <!--default case when there are no matches -->
+        <div *ngSwitchDefault>
+            <p>Please enter valid entry </p>
+        </div>
+</div>

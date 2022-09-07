@@ -9,6 +9,12 @@ import { TxtBlockLeftComponent } from './MyFirstAngularWebsite/txt-block-left/tx
 import { TxtBlockRightComponent } from './MyFirstAngularWebsite/txt-block-right/txt-block-right.component';
 import { OnewayBindingComponent } from './BindingDemo/oneway-binding/oneway-binding.component';
 import { TwowayBindingComponent } from './BindingDemo/twoway-binding/twoway-binding.component';
+import { EventBindingComponent } from './BindingDemo/event-binding/event-binding.component';
+import { NgIfDemoComponent } from './DirectivesDemo/ng-if-demo/ng-if-demo.component';
+import { NgSwitchDemoComponent } from './DirectivesDemo/ng-switch-demo/ng-switch-demo.component';
+import { NgForDemoComponent } from './DirectivesDemo/ng-for-demo/ng-for-demo.component';
+import { AngularPipeDemoComponent } from './PipeDemo/angular-pipe-demo/angular-pipe-demo.component';
+import { CustomPipesPipe } from './PipeDemo/custom-pipes.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,13 @@ import { TwowayBindingComponent } from './BindingDemo/twoway-binding/twoway-bind
     TxtBlockLeftComponent,
     TxtBlockRightComponent,
     OnewayBindingComponent,
-    TwowayBindingComponent
+    TwowayBindingComponent,
+    EventBindingComponent,
+    NgIfDemoComponent,
+    NgSwitchDemoComponent,
+    NgForDemoComponent,
+    AngularPipeDemoComponent,
+    CustomPipesPipe
   ],
   imports: [
     BrowserModule,

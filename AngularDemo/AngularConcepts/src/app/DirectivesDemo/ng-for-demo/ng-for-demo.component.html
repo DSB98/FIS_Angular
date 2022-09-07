@@ -1,0 +1,62 @@
+<article style="font-size: x-large;background-color: cadetblue;color: white;">
+    NgForOf
+    DIRECTIVE
+    A structural directive that renders a template for each item in a collection. The directive is placed on an element,
+    which becomes the parent of the cloned templates.</article>
+<a href="https://angular.io/api/common/NgForOf">NgForOf</a>
+<br>
+<!--Syntax  *ngFor ="Let varname of propertyname" -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Product Image</th>
+                        <th>Product Name</th>
+                        <th>Product ID</th>
+                        <th>Product Price</th>
+                    </tr>
+                </thead>
+                <!-- <tr *ngFor="let mypro of products;index as i">
+                    <td># {{i+1}}</td>
+                    <td><img src="{{mypro.proimg}}" width="70" alt="" /></td>
+                    <td>{{mypro.name}}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+                </tr> -->
+                <!-- <tr *ngFor="let mypro of products;first as i">
+                    <td>{{i}} </td>
+                    <td><img src="{{mypro.proimg}}" width="70" alt="" /></td>
+                    <td>{{mypro.name}}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+                </tr>  -->
+
+                <!-- <tr *ngFor="let mypro of products;last as i">
+                    <td>{{i}} </td>
+                    <td><img src="{{mypro.proimg}}" width="70" alt=""/></td>
+                    <td>{{mypro.name}}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+                </tr> -->
+                <!-- <tr *ngFor="let mypro of products;odd as i">
+                    <td>{{i}} </td>
+                    <td><img src="{{mypro.proimg}}" width="70" alt=""/></td>
+                    <td>{{mypro.name}}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+                </tr> -->
+                <!-- <tr *ngFor="let mypro of products;even as i">
+                    <td>{{i}} </td>
+                    <td><img src="{{mypro.proimg}}" width="70" alt="" /></td>
+                    <td>{{mypro.name}}</td>
+                    <td>{{mypro.id}}</td>
+                    <td>{{mypro.price}}</td>
+                </tr> -->
+
+            </table>
+        </div>
+    </div>
+</div>

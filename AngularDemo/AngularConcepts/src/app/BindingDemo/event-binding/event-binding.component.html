@@ -1,0 +1,16 @@
+<button (click)="AddtoCart()">Add to Cart</button>
+<br>
+<input type="text" value="Enter some text" (change)="onChnageEvent($event)">
+{{textMessage}}
+<br><br>
+<button value="laptop" (click)="AddtoCart2($event)" class="btn btn-primary m-2">Laptop</button>
+<button value="Tab" (click)="AddtoCart2($event)" class="btn btn-primary m-2">Tab</button>
+<button value="Phone" (click)="AddtoCart2($event)" class="btn btn-primary m-2">Phone</button><br>
+{{msg}}
+<br>
+<br>
+<input type="text" #inputInfo value="myinputinfo" name="text">
+<button (click)="getInputInfo(inputInfo)">Get info</button>
+{{info}}
+
+<!-- 9970750627 -->

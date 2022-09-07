@@ -1,0 +1,20 @@
+<article style="font-size: x-large;background-color: cadetblue;color: white;">
+    structural directive that conditionally includes a template based on the value of an expression coerced to Boolean.
+    When the expression evaluates to true, Angular renders the template provided in a then clause, and when false or
+    null, Angular renders the template provided in an optional else clause. The default template for the else clause is
+    blank.</article>
+<a href="https://angular.io/api/common/NgIf#description">NgIf#description</a>
+
+
+<div class="container" style="font-size: x-large;">
+    <button class="btn btn-success" (click)="onCreateBlock()">Create Block</button>
+    <br><br>
+    <div *ngIf="isValid; then tblock else eblock"></div>
+    <ng-template #tblock>
+        <div>block has been created and block name is my block</div>
+    </ng-template>
+    <ng-template #eblock>
+        <div>No Block has been created yet </div>
+    </ng-template>
+</div>
+<p>Note : Block name is not hard coded </p>
