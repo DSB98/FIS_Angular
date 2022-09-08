@@ -1,0 +1,22 @@
+<p>consume-utility-service works!</p>
+<div class="card" style="width: 18rem;">
+    <img src="./assets/User-Image.png" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{productName}}</h5>
+        <br>
+        Product Id : <strong class="text-success">{{product.ProdID}}</strong>
+        <br>
+        Product Name : <strong class="text-success">{{product.ProdName }}</strong>
+        <br>
+        <h5 class="card-title">Product list</h5>
+        <ng-container *ngFor="let prod of productList">
+            <br>
+            Product Id : <strong class="text-success">{{prod.ProdID}}</strong>
+            <br>
+            Product Name : <strong class="text-success">{{prod.ProdName }}</strong>
+            <br>
+            Product Price : <strong class="text-success">{{prod.ProdPrice }}</strong>
+        </ng-container>
+    </div>
+    <button class="btn btn-primary" (click)="btnClick()">Show Message</button>
+</div>

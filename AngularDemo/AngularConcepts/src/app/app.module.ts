@@ -14,7 +14,31 @@ import { NgIfDemoComponent } from './DirectivesDemo/ng-if-demo/ng-if-demo.compon
 import { NgSwitchDemoComponent } from './DirectivesDemo/ng-switch-demo/ng-switch-demo.component';
 import { NgForDemoComponent } from './DirectivesDemo/ng-for-demo/ng-for-demo.component';
 import { AngularPipeDemoComponent } from './PipeDemo/angular-pipe-demo/angular-pipe-demo.component';
-import { CustomPipesPipe } from './PipeDemo/custom-pipes.pipe';
+import { RouterModule, Routes } from '@angular/router';
+import { ProductComponent } from './InputOutputDecorator/InputDecorator/product/product.component';
+import { ProductListComponent } from './InputOutputDecorator/InputDecorator/product-list/product-list.component';
+import { ChildComponent } from './InputOutputDecorator/OutputDecorator/child/child.component';
+import { ParentComponent } from './InputOutputDecorator/OutputDecorator/parent/parent.component';
+import { ConsumeUtilityServiceComponent } from './ServiceDemo/consume-utility-service/consume-utility-service.component';
+
+
+
+const appRoutes:Routes=[
+  
+  {path:'header',component:HeaderComponent},
+  {path:'onewaybinding',component:OnewayBindingComponent},
+  {path:'twowaybinding',component:TwowayBindingComponent},
+  {path:'eventbinding',component:EventBindingComponent},
+  {path:'ngfor',component:NgForDemoComponent},
+  {path:'ngswitch',component: NgSwitchDemoComponent},
+  {path:'ngif',component: NgIfDemoComponent},
+  {path:'pipe',component:AngularPipeDemoComponent},
+  {path:'product',component:ProductComponent},
+  {path: 'parent',component:ParentComponent},
+  {path:'service',component:ConsumeUtilityServiceComponent}
+  
+
+]
 
 @NgModule({
   declarations: [
@@ -30,12 +54,18 @@ import { CustomPipesPipe } from './PipeDemo/custom-pipes.pipe';
     NgSwitchDemoComponent,
     NgForDemoComponent,
     AngularPipeDemoComponent,
-    CustomPipesPipe
+    ProductComponent,
+    ProductListComponent,
+    ChildComponent,
+    ParentComponent,
+    ConsumeUtilityServiceComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

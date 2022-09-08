@@ -1,0 +1,6 @@
+<p>product works! Parent list Element passing into child product</p>
+<p>I am form Input Decorator product works Product Component is Parent and ProductList is child here!</p>
+<div class="panel panel-primary" *ngFor="let product of products">
+    <app-product-list [product]="product"></app-product-list>
+   
+</div>
