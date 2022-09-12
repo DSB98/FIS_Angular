@@ -1,0 +1,77 @@
+<p>form-builder-demo works!</p>
+<h2>FORM BUILDER</h2>
+<P>In Angular two ways to creating angular reactive forms. By creating explicitly forms by
+    form group and form control class using new keyword.
+</P>
+<p>
+    Another way FormBuilder class. This class to provide sugar coating or shorten , simpler way
+    to create an object of from group, form array   
+ </p>
+ <p>
+     NOTE : Formbuilder class reduces amount of code, we uses to write , to build reactive forms
+</p>
+<p>
+    The formbuilder class has three methods
+    <br>
+    <b>Control() :</b>Control method usae to create / construct new form control
+    <br>
+    <b>Group() : </b>  Group is use to create new form group
+    <br>
+    <b>Array() :</b> Create new array form 
+</p>
+<p><b>VALIDATION FUNCTIONS ARE</b>
+    <br>
+<p>required , required true,email , pattern , min , max , minLength , maxLenght</p>    
+<div class="container mb-5">
+        <h1 class="text-center text-capitalize pt-5">Contact Us</h1>
+        <!-- <hr class="w-25 mx-auto pt-5"> -->
+        <div class="w-50 mx-auto">
+            <form [formGroup]="myFormBuilder" (ngSubmit)="onSubmit">
+              <div formGroupName="UserDetails">
+                 <div class="form-group">
+                  <label for="name">Enter your name</label>
+                  <input type="text" class="form-control" id="name" autocomplete="off" placeholder="Enter your name" formControlName="name"/>
+                  <span class="text-danger" *ngIf="myFormBuilder.get('UserDetails.name').errors && (myFormBuilder.get('UserDetails.name').dirty || myFormBuilder.get('UserDetails.name').touched)" >
+                     Name is required
+                    </span>
+                    <br>    
+                  <span class="text-danger" *ngIf="!(myFormBuilder.get('UserDetails.name').errors.minLength || myFormBuilder.get('UserDetails.name').errors.maxLenght)" >
+                    Name should be minimun 4 characters and maximum 8 characters
+                  </span>                
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" autocomplete="off" formControlName="email" />
+                  <small class="text-danger" *ngIf="!myFormBuilder.get('UserDetails.email').valid && myFormBuilder.get('UserDetails.email').touched">Please enter valid email </small>
+                </div>
+              </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile No:</label>
+                    <input type="number" class="form-control" id="mobile" />
+                  </div>
+                  <div class="form-group">
+                      <label for="Course">Select Course</label>
+                      <select class="form-control" id="Course">
+                      <option value="HTML">HTML</option>
+                      <option value="Javascript">Javascript</option>
+                      <option value="JQuery">JQuery</option>
+                      <option value="Angular">Angular</option>
+                      </select>
+              </div>
+              
+                  <div class="form-group">
+                      <div class="custom-control custom.radio" 
+                      *ngFor="let gender of genders">
+                      <input type="radio" id="{{gender.id}}" name="gender"
+                      value="{{gender.name}}" />
+                      <label class="custom_control-label" for={{gender.id}}>{{gender.name}}</label>
+                      </div>
+                  </div>
+                 
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+  </div>
+
+
+ 

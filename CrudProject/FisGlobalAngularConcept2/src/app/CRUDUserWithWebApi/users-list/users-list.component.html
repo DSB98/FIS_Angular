@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table border shadow">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of collection;index as i">
+                        <td scope="row"># {{i+1}}</td>
+                        <td scope="row">{{user.name}}</td>
+                        <td scope="row">{{user.username}}</td>
+                        <td scope="row">{{user.email}}</td>
+                        <td scope="row"><i (click)="deleteUser(user.id)" class="fa fa-trash"
+                                style="font-size:20px;color:red;">
+                            </i>
+                            <a routerLink="/UpdateUser/{{user.id}}">
+                                <i class="fa fa-edit px-3" style="font-size:20px;color:blue;"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

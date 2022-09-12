@@ -1,0 +1,37 @@
+<h2 style="font-size: x-large;background-color: cadetblue;color: white;">USER ADDED IN LIST , PUSH AND SPLICE AND NGFOR
+</h2>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" #name name="" class="form-control" placeholder="User Name">
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success" (click)="onCreateUser(name)">Add User</button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-danger" (click)="OnRemoveUser()">Remove User</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                    <th>SL_No.</th>
+                    <th>User Name</th>
+                    <th>Uppercase Name</th>
+                    <th>Remove User</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users;index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{ user.name }} </td>
+                        <td>{{ user.name |uppercase }} </td>
+                        <td><button class="btn btn-danger" (click)="OnRemoveItem(i)">Remove</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong>User details added successfully.
+        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <h1 class="text-center text-capitalize">Add User</h1>
+    <div class="w-50 mx-auto">
+        <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+            <!-- <div formGroupName="UserDetails"> -->
+            <div class="form-group">
+                <label for="name">Enter your name</label>
+                <input type="text" class="form-control" id="name" autocomplete="off" placeholder="Enter your name"
+                    formControlName="name" />
+                <!-- <small class="text-danger"
+                        *ngIf="!myReactiveForm.get('UserDetails.name')?.valid && myReactiveForm.get('UserDetails.name')?.touched">Please
+                        enter valid name </small> -->
+                <small class="text-danger"
+                    *ngIf="!myReactiveForm.get('name').valid && myReactiveForm.get('name').touched">Please
+                    enter valid name </small>
+            </div>
+            <div class="form-group">
+                <label for="username">Enter your user name</label>
+                <input type="text" class="form-control" id="name" autocomplete="off" placeholder="Enter your username"
+                    formControlName="username" />
+                <!-- <small class="text-danger"
+                        *ngIf="!myReactiveForm.get('UserDetails.username')?.valid && myReactiveForm.get('UserDetails.username')?.touched">Please
+                        enter valid username </small> -->
+                <small class="text-danger"
+                    *ngIf="!myReactiveForm.get('username')?.valid && myReactiveForm.get('username')?.touched">Please
+                    enter valid username </small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" autocomplete="off" formControlName="email" />
+                <!-- <small class="text-danger"
+                        *ngIf="!myReactiveForm.get('UserDetails.email')?.valid && myReactiveForm.get('UserDetails.email')?.touched">Please
+                        enter valid email </small> -->
+                <small class="text-danger"
+                    *ngIf="!myReactiveForm.get('email')?.valid && myReactiveForm.get('email')?.touched">Please
+                    enter valid email </small>
+
+            </div>
+            <!-- </div> -->
+            <div class="form-group">
+                <label for="phone">Mobile No:</label>
+                <input type="number" class="form-control" id="phone" formControlName="phone" />
+            </div>
+            <div class="form-group">
+                <label for="website">Enter your website name</label>
+                <input type="text" class="form-control" id="name" autocomplete="off"
+                    placeholder="Enter your website name" formControlName="website" />
+                <small class="text-danger"
+                    *ngIf="!myReactiveForm.get('website')?.valid && myReactiveForm.get('website')?.touched">Please
+                    enter valid website name </small>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" [disabled]="!myReactiveForm.valid">Submit</button>
+        </form>
+    </div>
+</div>

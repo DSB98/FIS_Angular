@@ -1,0 +1,36 @@
+<!-- <h1 class="display-1">Testing</h1>
+<app-push-splice-with-for-demo></app-push-splice-with-for-demo> -->
+<!-- <app-template-driven-form-demo></app-template-driven-form-demo> -->
+<!-- <app-reactive-form-demo></app-reactive-form-demo> -->
+<!-- <app-form-builder-demo></app-form-builder-demo> -->
+<!-- <h1 class="display-1">Testing</h1>
+<app-add-user></app-add-user>
+<app-update-user></app-update-user>
+<app-delete-user></app-delete-user>
+<app-details-user></app-details-user> -->
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center bg-light">
+    <h1 class="display-4">User Portal</h1>
+    <p class="lead">CRUD operation</p>
+  </div>
+</div>
+
+<div class="container">
+<header>
+  <nav>
+      <ul class="nav nav-tabs">
+          
+          <li class="nav-items"><a class="nav-link" routerLinkActive="active" routerLink="/UsersList">List Users</a>
+          </li>
+          <li class="nav-items"><a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+            routerLink="/AddUser">Add User</a></li>
+          <li class="nav-items"><a class="nav-link" routerLinkActive="active" routerLink="/UpdateUser">Update Users</a></li>
+          <li class="nav-items"><a class="nav-link" routerLinkActive="active" routerLink="/DeleteUser">Delete Users</a></li>
+          <li class="nav-items"><a class="nav-link" routerLinkActive="active" routerLink="/DetailsUser">User Details</a></li>
+
+      </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+</div>
